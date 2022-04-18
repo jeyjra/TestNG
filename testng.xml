@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+  <test  name="Test">
+  <groups>
+  <define name="First">
+  <include name="regression"></include>
+  <include name="Somke"></include>
+  </define>
+  <define name="Second">
+    <include name="E2E"></include>
+    <include name="sanity"></include>
+  </define>
+ <define name="Three">
+  <include name="regression"></include>
+  <include name="sanity"></include>
+ </define>
+ <run>
+ <include name="Second"></include>
+ </run>
+  </groups>
+   <classes>
+      <class name="org.tcs.Sample"/>
+      <class name="org.tcs.Employee"/>
+      <class name="org.tcs.Adcatin"/>
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->
